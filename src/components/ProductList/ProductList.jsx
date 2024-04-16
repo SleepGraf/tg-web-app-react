@@ -31,12 +31,12 @@ const ProductList = () => {
             totalPrice: getTotalPrice(addedItems),
             queryId,
         }
-        fetch('http://5.35.29.201/web-data', {
+        fetch('http://192.168.0.2:8000/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(data),
         })
     }, [addedItems])
 
